@@ -25,13 +25,14 @@ class DetailWisata extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Gambar Taman Kampus
+            // Sesudah (pakai ini):
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Container(
-                height: 180,
+              child: Image.asset(
+                'assets/images/detail_lokasi.png', // sesuaiin nama file kamu
+                height: 320,
                 width: double.infinity,
-                color: Colors.green.shade100,
-                child: const Icon(Icons.park, size: 90, color: Colors.green),
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(height: 20),

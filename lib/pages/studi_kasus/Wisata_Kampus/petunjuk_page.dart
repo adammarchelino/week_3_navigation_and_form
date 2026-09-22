@@ -25,17 +25,14 @@ class PetunjukPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Area Ilustrasi Rute / Peta
-            Container(
-              height: 160,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey.shade100,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Icon(
-                Icons.alt_route_rounded,
-                size: 80,
-                color: Color(0xFF007AFF),
+            // Sesudah (pakai ini):
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                'assets/images/rute.png', // sesuaiin nama file kamu
+                height: 320,
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(height: 20),

@@ -8,6 +8,7 @@ class HomeWisata extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           'Wisata Kampus',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
@@ -20,18 +21,13 @@ class HomeWisata extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            // Banner / Gambar Ilustrasi Kampus
-            Container(
-              height: 140,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.blue.shade50,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Icon(
-                Icons.location_city_rounded,
-                size: 80,
-                color: Color(0xFF007AFF),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                'assets/images/home.png', // sesuaiin nama file kamu
+                height: 320,
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
             ),
             const SizedBox(height: 20),

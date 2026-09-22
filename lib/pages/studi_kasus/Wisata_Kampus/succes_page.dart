@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_wisata.dart';
 
 class SuccessPage extends StatelessWidget {
   const SuccessPage({super.key});
@@ -23,14 +24,15 @@ class SuccessPage extends StatelessWidget {
           children: [
             const Spacer(),
             // Centang Hijau
-            Container(
-              width: 100,
-              height: 100,
-              decoration: const BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
+            // Sesudah (pakai ini):
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                'assets/images/done.png', // sesuaiin nama file kamu
+                height: 320,
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
-              child: const Icon(Icons.check, size: 60, color: Colors.white),
             ),
             const SizedBox(height: 30),
 
@@ -66,8 +68,9 @@ class SuccessPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  // Kembali ke halaman pertama di stack (HomePage)
-                  Navigator.pop(context);
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => const HomeWisata()),
+                  );
                 },
                 child: const Text(
                   'Kembali ke Beranda',
