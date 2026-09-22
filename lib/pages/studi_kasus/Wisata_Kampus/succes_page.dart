@@ -29,7 +29,7 @@ class SuccessPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
                 'assets/images/done.png', // sesuaiin nama file kamu
-                height: 320,
+                height: 350,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
